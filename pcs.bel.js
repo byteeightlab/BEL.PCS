@@ -57,7 +57,7 @@
             documentElement.classList.remove( ...supported.map( i => i + '-theme') );
             documentElement.classList.add( theme + '-theme' );
             metaScheme.content = theme;
-            documentElement.dispatchEvent(event);
+            document.dispatchEvent(event);
         }
 
         pcsf.remove = function(){
