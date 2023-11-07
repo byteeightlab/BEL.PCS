@@ -1,11 +1,11 @@
 /*!
- * PrefersColorScheme [BEL.PCS] v0.1
+ * PrefersColorScheme [BEL.PCS] v0.2
  * https://byteeightlab.ru/#PCS
  *
  * Released under the GNU General Public License v3.0
  * http://byteeightlab.ru/source/bel_pcs/LICENSE
  *
- * Date: 2023-11-02T07:00Z
+ * Date: 2023-11-07T15:00Z
  */
 
 (function(W){
@@ -41,6 +41,10 @@
 
         pcsf.get = function(){
             return localStorage.getItem(lsName) ?? supported.includes(metaScheme.content) ? metaScheme.content : this.systemic();
+        }
+
+        pcsf.getFromMemory = function(){
+            return localStorage.getItem(lsName) ?? 'auto';
         }
 
         pcsf.systemic = function(){
